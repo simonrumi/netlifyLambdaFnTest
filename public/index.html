@@ -13,12 +13,12 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const fetchBtn = document.getElementById('fetch-btn')
-        const responseText = document.getElementById('response-output')
+			const fetchBtn = document.getElementById('fetch-btn');
+			const responseText = document.getElementById('response-output');
 
-        fetchBtn.addEventListener('click', () => {
-          responseText.innerText = 'Static Text Replacement'
-        })
+			fetchBtn.addEventListener('click', async () => {
+				responseText.innerText = await fetch('/.netlify/functions/hello-world').then(respsonse => response.JSON);
+			});
       })
     </script>
   </body>
