@@ -17,7 +17,7 @@
 			const responseText = document.getElementById('response-output');
 
 			fetchBtn.addEventListener('click', async () => {
-				responseText.innerText = await fetch('/.netlify/functions/hello-world').then(respsonse => response.JSON);
+				responseText.innerText = await fetch('/.netlify/functions/hello-world').then(response => response.JSON);
 			});
       })
     </script>
